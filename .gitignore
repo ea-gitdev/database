@@ -1,0 +1,234 @@
+# =========================================================
+# Java / Maven
+# =========================================================
+
+# Maven build output
+target/
+*.class
+
+# Maven wrapper - KEEP these if you use Maven Wrapper
+# !mvnw
+# !mvnw.cmd
+# !.mvn/wrapper/maven-wrapper.jar
+
+
+# =========================================================
+# Java IDEs
+# =========================================================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# Eclipse metadata
+.metadata/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+# =========================================================
+# VS Code
+# =========================================================
+
+.vscode/
+
+
+# =========================================================
+# Angular / Node.js
+# =========================================================
+
+# Dependencies
+node_modules/
+
+# Angular build output
+dist/
+.angular/
+.cache/
+
+# Angular CLI cache
+.angular/cache/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager caches
+.npm/
+.yarn/
+.pnpm-store/
+
+
+# =========================================================
+# Environment / Secrets
+# =========================================================
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Angular environment files containing secrets
+# Uncomment if your environment files contain credentials/API keys
+# src/environments/environment.ts
+# src/environments/environment.*.ts
+
+
+# =========================================================
+# Spring Boot / Application
+# =========================================================
+
+# Local configuration
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# Local Spring configuration
+application-*.local.yml
+application-*.local.yaml
+application-*.local.properties
+
+
+# =========================================================
+# Logs
+# =========================================================
+
+*.log
+logs/
+log/
+
+
+# =========================================================
+# Operating System
+# =========================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+
+# =========================================================
+# Temporary / Backup Files
+# =========================================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*.orig
+*.old
+
+
+# =========================================================
+# Archives / Compressed Files
+# =========================================================
+
+*.7z
+*.zip
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.xz
+
+
+# =========================================================
+# Coverage / Testing
+# =========================================================
+
+coverage/
+.nyc_output/
+test-results/
+# reports/
+
+
+# =========================================================
+# Generated Files
+# =========================================================
+
+generated/
+generated-sources/
+generated-test-sources/
+
+# Swagger / OpenAPI generated files
+openapi-generator/
+
+
+# =========================================================
+# Docker
+# =========================================================
+
+# Docker local override files
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Docker environment files
+.env.docker
+
+
+# =========================================================
+# Database / Local Development
+# =========================================================
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL dumps / backups
+*.dump
+*.backup
+
+
+# =========================================================
+# Security / Certificates
+# =========================================================
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+
+# =========================================================
+# Miscellaneous
+# =========================================================
+
+*.pid
+*.pid.lock
+*.seed
+*.pid

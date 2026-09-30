@@ -1,0 +1,38 @@
+services:
+
+  postgres:
+    image: postgres:18
+    container_name: postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    networks:
+      - hris-network
+
+  mysql:
+    image: mysql:8.4
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: W!n5t0n
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - hris-network
+
+volumes:
+  postgres-data:
+    external: true
+    name: postgres-data
+
+  mysql-data:
+    name: mysql-data
+
+networks:
+  hris-network:
+    external: true
+    name: payroll_hris-network
