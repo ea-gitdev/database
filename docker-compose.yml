@@ -6,10 +6,14 @@ services:
     restart: unless-stopped
     ports:
       - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - postgres-data:/var/lib/postgresql
+      - postgresData:/var/lib/postgresql
     networks:
-      - hris-network
+      - dbNetwork
+      - cicdNetwork
+      - appNetwork
 
   mysql:
     image: mysql:8.4
@@ -20,19 +24,25 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
     volumes:
-      - mysql-data:/var/lib/mysql
+      - mysqlData:/var/lib/mysql
     networks:
-      - hris-network
+      - dbNetwork
 
 volumes:
-  postgres-data:
-    external: true
-    name: postgres-data
+  postgresData:
+    name: postgresData
 
-  mysql-data:
-    name: mysql-data
+  mysqlData:
+    name: mysqlData
 
 networks:
-  hris-network:
+  dbNetwork:
+    name: dbNetwork
+
+  cicdNetwork:
     external: true
-    name: payroll_hris-network
+    name: cicdNetwork
+  
+  appNetwork:
+    external: true
+    name: appNetwork
